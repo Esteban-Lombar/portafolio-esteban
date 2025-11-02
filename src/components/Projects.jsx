@@ -5,7 +5,7 @@ const projects = [
     title: "Kickslab App (MERN)",
     description:
       "Catálogo web interactivo de zapatillas con integración a WhatsApp Business, desarrollado con el stack MERN. Permite explorar modelos, colores y detalles en una interfaz moderna y responsiva.",
-    image: "/src/imagenes/kixlab-portafolio.png",
+    image: "/src/assets/kixlab-portafolio.png",
     demo: "https://kixlab.vercel.app/",
     code: "https://github.com/Esteban-Lombar/kixlab-app",
   },
@@ -13,7 +13,7 @@ const projects = [
     title: "Dashboard Educativo (Proyecto en Equipo)",
     description:
       "Dashboard para gestión de usuarios y partidas, visualización de estadísticas, actividad de salas y descargas de reportes en PDF. Proyecto desarrollado en equipo con Frontend, Backend y Login separados. Actualmente inactivo, pero funcional como demostración del trabajo colaborativo..",
-    image: "/src/imagenes/dashboartd-idiomas-chatbot.png",
+    image: "/src/assets/dashboartd-idiomas-chatbot.png",
     demo: "https://langmatch-dashboard.vercel.app/",
     code: "https://github.com/Esteban-Lombar/langmatch-dashboard",
   },
@@ -21,7 +21,7 @@ const projects = [
     title: "Gráfica de Ventas",
     description:
       "Gráfica interactiva de ventas desarrollada con React y Recharts, que permite visualizar precios, productos más vendidos y tendencias de ventas de zapatillas. Ideal para analizar desempeño de productos de manera visual y dinámica..",
-    image: "/src/imagenes/grafica-ventas-zapatillas-proyecto.png",
+    image: "/src/assets/grafica-ventas-zapatillas-proyecto.png",
     demo: "https://grafica-cyan.vercel.app/",
     code: "https://github.com/Esteban-Lombar/grafica",
   },
