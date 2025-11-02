@@ -51,8 +51,8 @@ export default function Hero() {
         >
           <div className="relative w-72 h-96 md:w-80 md:h-[480px] lg:w-96 lg:h-[520px] rounded-2xl overflow-hidden border-4 border-violet-500 shadow-[0_0_25px_rgba(139,92,246,0.5)] bg-gradient-to-b from-[#1e1b4b] to-[#0f172a]">
             <img
-              src="assets/foto-esteban-castano-portafolio.jpg"
-              alt="Esteban Castaño"
+              src="assets/foto-esteban-castano-portafolio.JPG"
+              alt="Esteban Castano"
               className="w-full h-full object-contain bg-[#0f172a]"
             />
           </div>
