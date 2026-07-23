@@ -4,78 +4,101 @@ const projects = [
   {
     title: "Kickslab App (MERN)",
     description:
-      "Catálogo web interactivo de zapatillas con integración a WhatsApp Business, desarrollado con el stack MERN. Permite explorar modelos, colores y detalles en una interfaz moderna y responsiva.",
+      "Catálogo web interactivo de zapatillas con integración a WhatsApp Business. Interfaz responsiva, filtros dinámicos y experiencia optimizada para mobile.",
     image: "/assets/kixlab-portafolio.png",
     demo: "https://kixlab.vercel.app/",
-    code: "https://github.com/Esteban-Lombar/kixlab-app",
+    code: null,
+    tags: ["MERN", "E-commerce", "WhatsApp"],
   },
   {
-    title: "Dashboard Educativo (Proyecto en Equipo)",
+    title: "Trailer Burguer Menu",
     description:
-      "Dashboard para gestión de usuarios y partidas, visualización de estadísticas, actividad de salas y descargas de reportes en PDF. Proyecto desarrollado en equipo con Frontend, Backend y Login separados. Actualmente inactivo, pero funcional como demostración del trabajo colaborativo..",
-    image: "/assets/dashboartd-idiomas-chatbot.png",
-    demo: "https://langmatch-dashboard.vercel.app/",
-    code: "https://github.com/Esteban-Lombar/langmatch-dashboard",
+      "Menú digital con diseño moderno y experiencia móvil optimizada, ideal para restaurantes y servicios de comida rápida.",
+    image: "/assets/menuTrailerBurguer.png",
+    demo: "https://trailer-burguer-menu-1.vercel.app/",
+    code: null,
+    tags: ["Web", "Restaurantes", "UX"],
   },
   {
-    title: "Gráfica de Ventas",
+    title: "Catálogo Cosméticos",
     description:
-      "Gráfica interactiva de ventas desarrollada con React y Recharts, que permite visualizar precios, productos más vendidos y tendencias de ventas de zapatillas. Ideal para analizar desempeño de productos de manera visual y dinámica..",
-    image: "/assets/grafica-ventas-zapatillas-proyecto.png",
-    demo: "https://grafica-cyan.vercel.app/",
-    code: "https://github.com/Esteban-Lombar/grafica",
+      "Catálogo online para productos de belleza con navegación ágil, presentación de productos y enfoque en conversión de clientes.",
+    image: "/assets/cosmeticosvE.png",
+    demo: "https://catalogo-cosmeticos-1.vercel.app/",
+    code: null,
+    tags: ["E-commerce", "Cosméticos", "Diseño"],
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16">
-      <div className="max-w-6xl mx-auto">
-        <h3 className="text-2xl font-bold mb-8">Proyectos relevantes</h3>
+    <section id="projects" className="py-20 bg-[#060814] text-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-10">
+          <div>
+            <p className="text-sm uppercase tracking-[0.35em] text-violet-400 mb-2">Proyectos</p>
+            <h3 className="text-3xl font-bold">Casos recientes</h3>
+          </div>
+          <p className="max-w-xl text-gray-400 text-sm sm:text-base">
+            Proyectos que destacan mi capacidad para cerrar productos completos, desde el diseño de la interfaz hasta la implementación y despliegue.
+          </p>
+        </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid md:grid-cols-2 gap-6"
+          className="grid gap-8 md:grid-cols-2"
         >
-          {projects.map((project) => (
-            <div
+          {projects.map((project, index) => (
+            <motion.div
               key={project.title}
-              className="bg-[#0d1117] border border-gray-800 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-violet-500/10 transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: index * 0.06 }}
+              className="group rounded-[2rem] overflow-hidden border border-white/10 bg-[#0d1117] shadow-[0_30px_80px_rgba(15,23,42,0.35)]"
             >
-              <div className="w-full h-56 overflow-hidden bg-black">
+              <div className="relative overflow-hidden bg-black h-64">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="p-5 flex flex-col gap-2">
-                <h4 className="text-lg font-semibold">{project.title}</h4>
-                <p className="text-sm text-gray-400">{project.description}</p>
-
-                <div className="flex gap-3 mt-4">
+              <div className="p-6 space-y-4">
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="rounded-full border border-violet-500/20 bg-violet-500/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-violet-300">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h4 className="text-xl font-semibold">{project.title}</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">{project.description}</p>
+                <div className="flex flex-wrap gap-3">
                   <a
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="border border-violet-500 text-violet-400 px-4 py-1 rounded-lg hover:bg-violet-500/10 transition"
+                    className="inline-flex items-center justify-center rounded-xl border border-violet-500 px-4 py-2 text-sm text-violet-200 hover:bg-violet-500/10 transition"
                   >
-                    Pagina
+                    Ver demo
                   </a>
-                  <a
-                    href={project.code}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border border-gray-700 text-gray-300 px-4 py-1 rounded-lg hover:bg-gray-700/30 transition"
-                  >
-                    Código
-                  </a>
+                  {project.code && (
+                    <a
+                      href={project.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center rounded-xl border border-gray-700 px-4 py-2 text-sm text-gray-300 hover:bg-gray-700/30 transition"
+                    >
+                      Código
+                    </a>
+                  )}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>

@@ -10,6 +10,7 @@ export default function Navbar() {
 
         <nav className="hidden md:flex gap-6 items-center text-gray-300">
           <a href="#about" className="hover:text-white">Sobre mí</a>
+          <a href="#services" className="hover:text-white">Servicios</a>
           <a href="#skills" className="hover:text-white">Habilidades</a>
           <a href="#projects" className="hover:text-white">Proyectos</a>
           <a href="#contact" className="hover:text-white">Contacto</a>
@@ -24,6 +25,7 @@ export default function Navbar() {
         <div className="md:hidden border-t border-gray-800 bg-black/70">
           <div className="flex flex-col px-6 py-4 gap-3 text-gray-300">
             <a href="#about" onClick={() => setOpen(false)}>Sobre mí</a>
+            <a href="#services" onClick={() => setOpen(false)}>Servicios</a>
             <a href="#skills" onClick={() => setOpen(false)}>Habilidades</a>
             <a href="#projects" onClick={() => setOpen(false)}>Proyectos</a>
             <a href="#contact" onClick={() => setOpen(false)}>Contacto</a>
